@@ -2,25 +2,47 @@
 (function () {
   const bodySizeSlider = document.getElementById('body-size-slider');
   const bodySizeValue = document.getElementById('body-size-value');
+  const scaleInput = document.getElementById('scale-input');
+  // const scaleValue = document.getElementById('scale-value');
   const root = document.documentElement;
 
-  // Check for saved body size preference or default to 4vh
-  const savedBodySize = localStorage.getItem('bodySize') || '4';
-  bodySizeSlider.value = savedBodySize;
-  updateBodySize(savedBodySize);
+  const savedScale = localStorage.getItem('scale') || '100';
+  scaleInput.value = savedScale;
+  updateScaleSize(savedScale);
 
-  // Update body size on slider change
-  bodySizeSlider.addEventListener('input', (e) => {
-    const value = e.target.value;
-    updateBodySize(value);
-    localStorage.setItem('bodySize', value);
-  });
-
-  function updateBodySize(value) {
-    const vhValue = `${value}vh`;
-    root.style.setProperty('--body-size', vhValue);
-    bodySizeValue.textContent = vhValue;
+  function updateScaleSize(s) {
+    root.style.setProperty('--scale-size', s/100);
+    // scaleValue.textContent = s;
   }
+
+  scaleInput.addEventListener('input', (e) => {
+    const value = e.target.value;
+    updateScaleSize(value);
+    localStorage.setItem('scale', value)
+  //   const value = e.target.value;
+  //   updateBodySize(value);
+  //   localStorage.setItem('bodySize', value);
+
+  })
+
+
+  // Check for saved body size preference or default to 4vh
+  // const savedBodySize = localStorage.getItem('bodySize') || '4';
+  // bodySizeSlider.value = savedBodySize;
+  // updateBodySize(savedBodySize);
+
+  // // Update body size on slider change
+  // bodySizeSlider.addEventListener('input', (e) => {
+  //   const value = e.target.value;
+  //   updateBodySize(value);
+  //   localStorage.setItem('bodySize', value);
+  // });
+
+  // function updateBodySize(value) {
+  //   const vhValue = `${value}vh`;
+  //   root.style.setProperty('--body-size', vhValue);
+  //   bodySizeValue.textContent = vhValue;
+  // }
 })();
 
 // Theme toggle functionality

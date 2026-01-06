@@ -15,18 +15,10 @@
           </div>
           <div class="header-controls">
             <div class="body-size-control">
-              <label for="body-size-slider">Body Size:</label>
-              <div class="slider-container">
-                <input
-                  type="range"
-                  id="body-size-slider"
-                  min="1"
-                  max="10"
-                  value="4"
-                  step="0.25"
-                  class="slider"
-                />
-                <span id="body-size-value" class="slider-value">4vh</span>
+              <label for="scale-input">Scale Percentage (50-300%)</label>
+              <div class="scale-input">
+                <input type="number" id="scale-input" name="scale-input" min="50" max="300">
+              </div>
               </div>
             </div>
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
@@ -42,36 +34,29 @@
 
       <section class="font-section">
         <h2>Typography Usage</h2>
+        <p>Base body text set at 2.52vh when at 100%. Text can be scaled using the input: proposed sizes are Standard (100%), Medium (125%), Large (150%) and XL (200%).</p>
         <div class="text-samples">
           <div class="text-sample">
-            <span class="label">Title H1:</span>
+            <span class="label">Title H1 (2.51x):</span>
             <span class="title-h1">Title H1</span>
           </div>
           <div class="text-sample">
-            <span class="label">Tagline:</span>
+            <span class="label">Tagline (1.25x):</span>
             <span class="tagline">Tagline</span>
           </div>
           <div class="text-sample">
-            <span class="label">Subhead:</span>
+            <span class="label">Subhead (1.09x):</span>
             <span class="subhead">Subhead</span>
           </div>
           <div class="text-sample">
-            <span class="label">Body:</span>
+            <span class="label">Body (1x):</span>
             <span class="body">Body</span>
           </div>
           <div class="text-sample">
-            <span class="label">Caption:</span>
+            <span class="label">Caption (0.58x):</span>
             <span class="caption">Caption</span>
           </div>
-          <div class="text-sample">
-            <span class="label">Button Regular:</span>
-            <span class="button-regular">Button Regular</span>
-          </div>
-          <div class="text-sample">
-            <span class="label">Button Bold:</span>
-            <span class="button-bold">Button Bold</span>
-          </div>
-        </div>
+        </div> 
       </section>
     </div>
     <script src="script.js"></script>
