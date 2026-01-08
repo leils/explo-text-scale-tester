@@ -9,16 +9,17 @@
 
 /* Typography scale - Body is the base at 4vh */
 :root {
-  --body-size: 2.52vh;
-  --scale-size: 2;
+  --body-base: 2.52vh;
+  --scale-size: 1;
   
   /* Typography scales relative to body */
-  --title-h1-size: calc(var(--body-size) * var(--scale-size) * 2.51);      /* 10vh - Large, prominent titles */
-  --tagline-size: calc(var(--body-size) * var(--scale-size) * 1.25);      /* 7vh - Supporting tagline text */
-  --subhead-size: calc(var(--body-size) * var(--scale-size) * 1.09);        /* 6vh - Section subheadings */
-  --caption-size: calc(var(--body-size) * var(--scale-size) * 0.58);      /* 3.5vh - Small caption text */
-  --button-regular-size: var(--body-size);             /* 4vh - Button text (same as body) */
-  --button-bold-size: var(--body-size);                /* 4vh - Button text (same as body) */
+  --body-size: calc(var(--body-base) * var(--scale-size));        
+  --title-h1-size: calc(var(--body-base) * var(--scale-size) * 2.51);      /* 10vh - Large, prominent titles */
+  --tagline-size: calc(var(--body-base) * var(--scale-size) * 1.25);      /* 7vh - Supporting tagline text */
+  --subhead-size: calc(var(--body-base) * var(--scale-size) * 1.09);        /* 6vh - Section subheadings */
+  --caption-size: calc(var(--body-base) * var(--scale-size) * 0.58);      /* 3.5vh - Small caption text */
+  --button-regular-size: var(--body-base);             /* 4vh - Button text (same as body) */
+  --button-bold-size: var(--body-base);                /* 4vh - Button text (same as body) */
 }
 
 body {
